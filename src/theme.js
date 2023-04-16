@@ -17,6 +17,9 @@ const theme = {
     red: '#DC2626',
     green: '#00ea00',
   },
+  fontFamily: {
+    caveat: '"Caveat", cursive',
+  },
   img: {
     bg: `url(${bgImg})`,
   },

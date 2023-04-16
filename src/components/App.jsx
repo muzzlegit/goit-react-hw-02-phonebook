@@ -4,7 +4,7 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 //STYLES
-import { Section, Container, Content, SideBar, Title } from './App.styled';
+import { Section, Container, Content, Title } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -52,6 +52,7 @@ export class App extends Component {
         <Container>
           <Content>
             <Title> Книга контактів</Title>
+            <ContactForm addContact={this.addContact} />
             <Filter
               filter={this.state.filter}
               onFilterChange={this.onFilterChange}
@@ -60,9 +61,7 @@ export class App extends Component {
               contacstList={visibleContact}
               deleteContact={this.deleteContact}
             />
-            <ContactForm addContact={this.addContact} />
           </Content>
-          <SideBar></SideBar>
         </Container>
       </Section>
     );

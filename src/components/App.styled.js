@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import theme from 'theme';
+
 export const Section = styled.section({
   margin: '2vh auto',
   height: '96vh',
@@ -12,8 +13,8 @@ export const Section = styled.section({
 });
 export const Container = styled.div({
   margin: '0 auto',
-  padding: '16px 8px 16px 90px',
-  minHeight: '100%',
+  padding: '16px 110px 16px 100px',
+  maxHeight: '96%',
   width: '100%',
   boxSizing: 'border-box',
   display: 'flex',
@@ -22,21 +23,12 @@ export const Container = styled.div({
   gap: '6px',
 });
 export const Content = styled.div({
-  width: '90%',
+  width: '100%',
   boxSizing: 'border-box',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  gap: '4px',
-  outline: '1px solid blue',
-});
-export const SideBar = styled.div({
-  height: '100%',
-  width: '14.1%',
-  outline: '1px solid blue',
+  textAlign: 'center',
 });
 export const Title = styled.h1({
-  fontSize: '42px',
+  marginBottom: '20px',
+  fontSize: '52px',
   textDecoration: 'underline',
 });

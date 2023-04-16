@@ -1,27 +1,33 @@
 import PropTypes from 'prop-types';
+//ICONS
 import { AiOutlineScissor } from 'react-icons/ai';
+//STYLE
+import { List, Item, Button } from './ContactList.styled';
 
 export const ContactList = ({ contacstList, deleteContact }) => {
   return (
-    <ul>
+    <List>
+      {!contacstList.length ? (
+        <Item color="black">В тебе немає такого контакту</Item>
+      ) : null}
       {contacstList.map(({ id, name, number }, index) => {
         return (
-          <li key={id} id={id}>
+          <Item key={id} id={id}>
             <p>
               {index + 1}. {name} - {number}
             </p>
-            <button
+            <Button
               type="button"
               onClick={() => {
                 deleteContact(id);
               }}
             >
-              <AiOutlineScissor />
-            </button>
-          </li>
+              <AiOutlineScissor size="24px" />
+            </Button>
+          </Item>
         );
       })}
-    </ul>
+    </List>
   );
 };
 
