@@ -4,11 +4,15 @@ import { AiOutlineScissor } from 'react-icons/ai';
 //STYLE
 import { List, Item, Button } from './ContactList.styled';
 
-export const ContactList = ({ contacstList, deleteContact }) => {
+export const ContactList = ({ contacts, contacstList, deleteContact }) => {
   return (
     <List>
       {!contacstList.length ? (
-        <Item color="black">В тебе немає такого контакту</Item>
+        <Item color="black">
+          {contacts.length
+            ? 'В тебе немає такого контакту'
+            : 'Здається, в тебе немає жодного знайомого :('}
+        </Item>
       ) : null}
       {contacstList.map(({ id, name, number }, index) => {
         return (
